@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>yycpedestrian – incident feed</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>yycpedestrian</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="map.html">hotspot map</a></li>
+        <li><a href="news.html">incident feed</a></li>
+        <li><a href="resources.html">resources</a></li>
+        <li><a href="stats.html">stats</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>recent pedestrian collisions</h2>
+    <ul id="news-feed">
+      <li>loading articles...</li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>created by k80 – built with 💖</p>
+  </footer>
+
+  <script>
+    fetch('data/sample-articles.json')
+      .then(response => response.json())
+      .then(data => {
+        const feed = document.getElementById('news-feed');
+        feed.innerHTML = '';
+        data.articles.forEach(article => {
+          const li = document.createElement('li');
+          li.innerHTML = `<a href="${article.url}" target="_blank">${article.title}</a> <small>(${article.date})</small>`;
+          feed.appendChild(li);
+        });
+      })
+      .catch(error => {
+        document.getElementById('news-feed').innerHTML = '<li>error loading articles.</li>';
+        console.error(error);
+      });
+  </script>
+</body>
+</html>
 
