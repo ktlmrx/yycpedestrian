@@ -1,1 +1,20 @@
+{
+  "articles": [
+    {
+      "title": "Woman dies after being run over at drive-thru in northwest Calgary",
+      "url": "https://www.cbc.ca/news/canada/calgary/woman-dies-after-being-run-over-at-drive-thru-in-northwest-calgary-1.7541882",
+      "date": "2025-05-24"
+    },
+    {
+      "title": "Teen skateboarder killed in NW Calgary pedestrian collision",
+      "url": "https://calgaryherald.com/news/local-news/skateboarding-teen-struck-by-vehicle-in-northwest-calgary-has-died",
+      "date": "2025-05-20"
+    },
+    {
+      "title": "Pedestrian deaths on the rise in Calgary",
+      "url": "https://www.cbc.ca/news/canada/calgary/pedestrian-deaths-increase-1.7530354",
+      "date": "2025-05-18"
+    }
+  ]
+}
 
