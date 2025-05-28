@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>yycpedestrian – hotspot map</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p9w+J5j1mv8p7FiS76jW+wqU6MSykB5mZ5vRzJwSg6A="
+    crossorigin=""
+  />
+  <style>
+    #map {
+      height: 500px;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>yycpedestrian</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="map.html">hotspot Map</a></li>
+        <li><a href="news.html">incident feed</a></li>
+        <li><a href="resources.html">resources</a></li>
+        <li><a href="stats.html">stats</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>collision hotspot map</h2>
+    <p>this map shows areas in Calgary with frequent pedestrian collisions. stay alert.</p>
+    <div id="map"></div>
+  </main>
+
+  <footer>
+    <p>created by k80 – built with 💖</p>
+  </footer>
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-GZC+gDnNuG2KXDAmHkRb1iHbQWnnzU9olZl9hA2ga24="
+    crossorigin=""
+  ></script>
+  <script src="js/map.js"></script>
+</body>
+</html>
 
