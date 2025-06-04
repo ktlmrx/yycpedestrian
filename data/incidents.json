@@ -3,15 +3,19 @@
     "id": "2025-05-11",
     "title": "Woman dies after being run over at drive-thru in northwest Calgary",
     "date": "2025-05-11",
-    "location": "Northwest Calgary",
-    "link": "https://www.cbc.ca/news/canada/calgary/woman-dies-after-being-run-over-at-drive-thru-in-northwest-calgary-1.7541882"
+    "location": "4122 Brentwood Rd NW, Calgary, AB T2L 1K8",
+    "link": "https://www.cbc.ca/news/canada/calgary/woman-dies-after-being-run-over-at-drive-thru-in-northwest-calgary-1.7541882",
+    "lat": 51.087216833500904,
+    "lng": -114.12995806801841
   },
   {
     "id": "2025-05-13",
     "title": "Calgary teen dies after southeast hit-and-run",
     "date": "2025-05-13",
-    "location": "Southeast Calgary",
     "link": "https://calgary.citynews.ca/2025/05/13/calgary-southeast-hit-and-run-pedestrian/"
+    "location": "52 Street SE south of 8 Avenue SE",
+    "lat": 51.0445262315874, 
+    "lng": -113.95834428166631
   },
   {
     "id": "2025-05-18",
