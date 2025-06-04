@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>stats | yycpedestrian</title>
   <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <script type="module" src="components/header.js"></script>
@@ -32,6 +33,10 @@
 <section>
   <h3>sample chart: pedestrian injuries (mock data)</h3>
   <canvas id="injuryChart" width="400" height="200"></canvas>
+</section>
+<section>
+  <h2>pedestrian collision stats (2013–2018)</h2>
+  <canvas id="collisionChart" width="600" height="400"></canvas>
 </section>
 
 
@@ -94,6 +99,7 @@
     }
   });
 </script>
+<script src="js/stats.js"></script>
 
 </body>
 </html>
