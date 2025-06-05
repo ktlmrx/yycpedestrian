@@ -5,13 +5,11 @@
   <title>incident map | yyc pedestrian</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/style.css" />
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC0="
-    crossorigin=""
-  />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+
   <style>
+    
     #map {
       height: 600px;
       width: 100%;
@@ -19,21 +17,22 @@
     }
   </style>
 </head>
-<body>
+
+  <body>
   <script type="module" src="components/header.js"></script>
 
-  <main>
+    <main>
     <h2>calgary pedestrian incidents map</h2>
     <p>locations shown are approximate, based on available reporting.</p>
     <div id="map"></div>
-  </main>
+    </main>
 
   <script type="module" src="components/footer.js"></script>
   <script
     src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-o9N1j7kGgZkpEoFj3FV9U7f3wODXxbTSrUM3pF5hRa8="
     crossorigin=""
-  ></script>
+    ></script>
   <script src="js/map.js" defer></script>
 </body>
 </html>
