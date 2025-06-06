@@ -7,7 +7,9 @@
     "link": "https://www.cbc.ca/news/canada/calgary/woman-dies-after-being-run-over-at-drive-thru-in-northwest-calgary-1.7541882",
     "lat": 51.087216833500904,
     "lng": -114.12995806801841,
-    "source": "CBC"
+    "source": "CBC",
+    "fatal": true,
+    "tags":
   },
   {
     "id": "2025-05-13",
@@ -17,7 +19,9 @@
     "location": "52 Street SE south of 8 Avenue SE",
     "lat": 51.0445262315874, 
     "lng": -113.95834428166631,
-    "source": "City News"
+    "source": "City News",
+    "fatal": true,
+    "tags":
   },
   {
     "id": "2025-05-18",
@@ -27,7 +31,9 @@
     "link": "https://calgaryherald.com/news/local-news/skateboarding-teen-struck-by-vehicle-in-northwest-calgary-has-died",
     "lat": null,
     "lng": null,
-    "source": "Calgary Herald"
+    "source": "Calgary Herald",
+    "fatal": true,
+    "tags":
   },
   {
     "id": "2025-05-08",
@@ -37,6 +43,8 @@
     "link": "https://www.cbc.ca/news/canada/calgary/pedestrian-deaths-increase-1.7530354",
     "lat": null,
     "lng": null,
-    "source": "CBC"
+    "source": "CBC",
+    "fatal": false,
+    "tags":
   }
 ]
