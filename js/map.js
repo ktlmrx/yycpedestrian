@@ -1,26 +1,34 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const map = L.map("map").setView([51.0447, -114.0719], 11); // Center on Calgary
+  const map = L.map("map").setView([51.0447, -114.0719], 11); // Centered on Calgary
 
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution:
-      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    attribution: "&copy; OpenStreetMap contributors"
   }).addTo(map);
 
   fetch("data/incidents.json")
-    .then((res) => res.json())
-    .then((data) => {
-      data.forEach((incident) => {
-        if (incident.lat && incident.lng) {
-          const marker = L.marker([incident.lat, incident.lng]).addTo(map);
-          marker.bindPopup(`
-            <strong>${incident.date}</strong><br />
-            <a href="${incident.link}" target="_blank">${incident.title}</a><br />
-            <em>${incident.location}</em>
-          `);
-        }
+    .then(response => response.json())
+    .then(data => {
+      const withCoords = data.filter(incident => incident.lat && incident.lng);
+
+      withCoords.forEach(incident => {
+        const marker = L.circleMarker([incident.lat, incident.lng], {
+          radius: 8,
+          color: incident.fatal ? "#830a0a" : "#dfd646", // red if fatal, yellow otherwise
+          fillOpacity: 0.7,
+          weight: 1
+        });
+
+        const popupContent = `
+          <strong>${incident.date}</strong><br />
+          <a href="${incident.link}" target="_blank">${incident.title}</a><br />
+          <em>${incident.location}</em>
+        `;
+
+        marker.bindPopup(popupContent);
+        marker.addTo(map);
       });
     })
-    .catch((err) => {
-      console.error("Failed to load map incidents:", err);
+    .catch(err => {
+      console.error("Error loading map data:", err);
     });
 });
