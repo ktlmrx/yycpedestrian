@@ -26,6 +26,20 @@
     <p>locations shown are approximate, based on available reporting.</p>
     <div id="map"></div>
     </main>
+<section>
+  <label for="filter-fatal">Show only fatal incidents</label>
+  <input type="checkbox" id="filter-fatal" />
+</section>
+
+<section>
+  <label for="filter-tag">Filter by tag:</label>
+  <select id="filter-tag">
+    <option value="">all</option>
+    <option value="hit-and-run">hit and run</option>
+    <option value="skateboard">skateboard</option>
+    <!-- add other tags you use -->
+  </select>
+</section>
 
   <script type="module" src="components/footer.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
