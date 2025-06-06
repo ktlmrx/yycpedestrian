@@ -6,7 +6,8 @@
     "location": "4122 Brentwood Rd NW, Calgary, AB T2L 1K8",
     "link": "https://www.cbc.ca/news/canada/calgary/woman-dies-after-being-run-over-at-drive-thru-in-northwest-calgary-1.7541882",
     "lat": 51.087216833500904,
-    "lng": -114.12995806801841
+    "lng": -114.12995806801841,
+    "source": "CBC"
   },
   {
     "id": "2025-05-13",
@@ -15,7 +16,8 @@
     "link": "https://calgary.citynews.ca/2025/05/13/calgary-southeast-hit-and-run-pedestrian/",
     "location": "52 Street SE south of 8 Avenue SE",
     "lat": 51.0445262315874, 
-    "lng": -113.95834428166631
+    "lng": -113.95834428166631,
+    "source": "City News"
   },
   {
     "id": "2025-05-18",
@@ -23,12 +25,18 @@
     "date": "2025-05-18",
     "location": "Northwest Calgary",
     "link": "https://calgaryherald.com/news/local-news/skateboarding-teen-struck-by-vehicle-in-northwest-calgary-has-died"
+    "lat":,
+    "lng":,
+    "source": "Calgary Herald"
   },
   {
     "id": "2025-05-08",
     "title": "Rise in pedestrian deaths concerns Calgary police",
     "date": "2025-05-08",
     "location": "Calgary",
-    "link": "https://www.cbc.ca/news/canada/calgary/pedestrian-deaths-increase-1.7530354"
+    "link": "https://www.cbc.ca/news/canada/calgary/pedestrian-deaths-increase-1.7530354",
+    "lat":,
+    "lng":,
+    "source": "CBC"
   }
 ]
