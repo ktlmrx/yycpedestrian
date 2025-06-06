@@ -24,9 +24,9 @@
     "title": "Skateboarding teen struck in northwest Calgary has died",
     "date": "2025-05-18",
     "location": "Northwest Calgary",
-    "link": "https://calgaryherald.com/news/local-news/skateboarding-teen-struck-by-vehicle-in-northwest-calgary-has-died"
-    "lat":,
-    "lng":,
+    "link": "https://calgaryherald.com/news/local-news/skateboarding-teen-struck-by-vehicle-in-northwest-calgary-has-died",
+    "lat": null,
+    "lng": null,
     "source": "Calgary Herald"
   },
   {
@@ -35,8 +35,8 @@
     "date": "2025-05-08",
     "location": "Calgary",
     "link": "https://www.cbc.ca/news/canada/calgary/pedestrian-deaths-increase-1.7530354",
-    "lat":,
-    "lng":,
+    "lat": null,
+    "lng": null,
     "source": "CBC"
   }
 ]
