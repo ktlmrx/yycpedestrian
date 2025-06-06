@@ -9,7 +9,7 @@
     "lng": -114.12995806801841,
     "source": "CBC",
     "fatal": true,
-    "tags": "adult", "northwest",
+    "tags": ["adult", "northwest"],
   },
   {
     "id": "2025-05-13",
@@ -21,7 +21,7 @@
     "lng": -113.95834428166631,
     "source": "City News",
     "fatal": true,
-    "tags": "teen", "southeast",
+    "tags": ["teen", "southeast"],
   },
   {
     "id": "2025-05-18",
@@ -33,7 +33,7 @@
     "lng": null,
     "source": "Calgary Herald",
     "fatal": true,
-    "tags": "teen", "northwest",
+    "tags": ["teen", "northwest"],
   },
   {
     "id": "2025-05-08",
@@ -45,6 +45,6 @@
     "lng": null,
     "source": "CBC",
     "fatal": false,
-    "tags": "adult",
+    "tags": ["adult"],
   }
 ]
