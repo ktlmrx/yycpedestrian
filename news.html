@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>yycpedestrian – incident feed</title>
+  <title>yycpedestrian: local news</title>
+  <meta name="description" content="Plan your stay, avoid the crosswalks, and discover Calgary from a safe distance. A satirical guide to pedestrian collisions in YYC." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -19,7 +20,7 @@
 <script type="module" src="components/footer.js"></script>
 
   <script>
-    fetch('data/sample-articles.json')
+    fetch('data/incidents.json')
       .then(response => response.json())
       .then(data => {
         const feed = document.getElementById('news-feed');
