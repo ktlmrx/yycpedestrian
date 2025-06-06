@@ -32,3 +32,43 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Error loading map data:", err);
     });
 });
+
+const filterFatalCheckbox = document.getElementById("filter-fatal");
+const filterTagSelect = document.getElementById("filter-tag");
+const feed = document.getElementById("incident-feed");
+
+function renderIncidents(data) {
+  feed.innerHTML = ""; // Clear existing list
+  const filteredData = data.filter(incident => {
+    if (filterFatalCheckbox.checked && !incident.fatal) return false;
+    if (filterTagSelect.value && (!incident.tags || !incident.tags.includes(filterTagSelect.value))) return false;
+    return true;
+  });
+
+  filteredData.forEach(incident => {
+    const li = document.createElement("li");
+    li.innerHTML = `
+      <strong>${incident.date}</strong> – 
+      <a href="${incident.link}" target="_blank">${incident.title}</a> 
+      <em>(${incident.location})</em>
+    `;
+    feed.appendChild(li);
+  });
+
+  updateDaysSince(filteredData);
+}
+
+// When filters change:
+filterFatalCheckbox.addEventListener("change", () => renderIncidents(incidentsData));
+filterTagSelect.addEventListener("change", () => renderIncidents(incidentsData));
+
+// Fetch data once and store it
+let incidentsData = [];
+
+fetch("data/incidents.json")
+  .then(res => res.json())
+  .then(data => {
+    incidentsData = data.sort((a, b) => new Date(b.date) - new Date(a.date));
+    renderIncidents(incidentsData);
+  })
+  .catch(console.error);
