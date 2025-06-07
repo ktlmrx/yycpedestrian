@@ -25,7 +25,7 @@
       .then(data => {
         const feed = document.getElementById('news-feed');
         feed.innerHTML = '';
-        data.articles.forEach(article => {
+        data.forEach(article => {
           const li = document.createElement('li');
           li.innerHTML = `<a href="${article.url}" target="_blank">${article.title}</a> <small>(${article.date})</small>`;
           feed.appendChild(li);
