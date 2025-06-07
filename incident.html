@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <script type="module" src="components/header.js"></script>
+  <link rel="modulepreload" href="components/header.js" />
 
 <main id="main-content">
     <article id="incident-details" aria-live="polite">
@@ -22,7 +22,8 @@
     </article>
   </main>
 
-  <script type="module" src="components/footer.js"></script>
+  <link rel="modulepreload" href="components/footer.js" />
+
   <script src="js/incident.js" defer></script>
 </body>
 </html>
