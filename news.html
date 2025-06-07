@@ -20,21 +20,22 @@
 <script type="module" src="components/footer.js"></script>
 
   <script>
-    fetch('data/incidents.json')
-      .then(response => response.json())
-      .then(data => {
-        const feed = document.getElementById('news-feed');
-        feed.innerHTML = '';
-        data.forEach(article => {
-          const li = document.createElement('li');
-          li.innerHTML = `<a href="${article.url}" target="_blank">${article.title}</a> <small>(${article.date})</small>`;
-          feed.appendChild(li);
-        });
-      })
-      .catch(error => {
-        document.getElementById('news-feed').innerHTML = '<li>error loading articles.</li>';
-        console.error(error);
-      });
+fetch('data/incidents.json')
+  .then(response => response.json())
+  .then(data => {
+    const feed = document.getElementById('news-feed');
+    feed.innerHTML = '';
+    data.forEach(article => {
+      const li = document.createElement('li');
+      li.innerHTML = `<a href="${article.url}" target="_blank">${article.title}</a> <small>(${article.date})</small>`;
+      feed.appendChild(li);
+    });
+  })
+  .catch(error => {
+    document.getElementById('news-feed').innerHTML = '<li>error loading articles.</li>';
+    console.error(error);
+  });
+
   </script>
 </body>
 </html>
