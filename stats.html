@@ -9,8 +9,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <script type="module" src="components/header.js"></script>
-
+  <link rel="modulepreload" href="components/header.js" />
   <main id="main-content">
   <h2>calgary pedestrian incident statistics</h2>
 
@@ -34,7 +33,9 @@
 
 
   </main>
-<script type="module" src="components/footer.js"></script>
+  
+<link rel="modulepreload" href="components/footer.js" />
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="js/stats.js"></script>
 
