@@ -19,8 +19,7 @@
 </head>
 
   <body>
-  <script type="module" src="components/header.js"></script>
-
+  <link rel="modulepreload" href="components/header.js" />
     <main id="main-content">
     <h2>calgary pedestrian incidents map</h2>
     <p>locations shown are approximate, based on available reporting.</p>
@@ -43,7 +42,8 @@
     <ul id="incident-feed"></ul>
     </main>
 
-  <script type="module" src="components/footer.js"></script>
+    <link rel="modulepreload" href="components/footer.js" />
+
   <script src="js/map.js" defer></script>
 </body>
 </html>
