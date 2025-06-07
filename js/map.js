@@ -61,7 +61,8 @@ function renderMarkers(data) {
       const popupContent = `
         <strong>${incident.date}</strong><br />
         <a href="${incident.link}" target="_blank">${incident.title}</a><br />
-        <em>${incident.location}</em>
+        <em>${incident.location}</em><br />
+        <a href="incident.html?id=${incident.id}">🔎 View details</a>
       `;
 
       marker.bindPopup(popupContent);
@@ -80,9 +81,10 @@ function renderIncidents(data) {
     const li = document.createElement("li");
     li.innerHTML = `
       <strong>${incident.date}</strong> – 
-      <a href="${incident.link}" target="_blank">${incident.title}</a> 
+      <a href="incident.html?id=${incident.id}">${incident.title}</a> 
       <em>(${incident.location})</em>
     `;
+
     feed.appendChild(li);
   });
 
