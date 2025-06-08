@@ -6,13 +6,16 @@
   --font-size-lg: 1.25rem;
   --font-size-xl: 2.5rem;
   --font-size-xxl: 4rem;
-  --color-bg: #121212;
-  --color-bg-alt: #1c1c1c;
-  --color-text: #eaeaea;
-  --color-muted: #a1a1a1;
-  --color-accent: #dfd646;
-  --color-accent-alt: #830a0a;
-  --color-button: #830a0a;
+
+  /* colour palette */
+  --color-bg: #1c1c1c;             /* eerie black */
+  --color-bg-alt: #2a2a2a;
+  --color-text: #e4ffe1;           /* nyanza */
+  --color-muted: #c7c7c7;
+  --color-accent: #faaf19;         /* xanthous */
+  --color-accent-alt: #d2001c;     /* fire-engine-red */
+  --color-button: #d2001c;
+
   --spacing: 1rem;
 }
 
@@ -43,6 +46,7 @@ h1, h2, h3, h4 {
   margin-bottom: 0.5rem;
   text-transform: lowercase;
   position: relative;
+  color: var(--color-accent);
 }
 
 h2::before {
@@ -64,11 +68,13 @@ h2 {
 h3 {
   font-size: var(--font-size-lg);
   margin-top: 1.5rem;
+  color: var(--color-accent);
 }
 
 p, li {
   font-size: var(--font-size-base);
   margin-bottom: 1rem;
+  color: var(--color-text);
 }
 
 em {
@@ -123,6 +129,32 @@ a:hover {
 /* sections */
 section {
   margin-bottom: 4rem;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero.splash {
+  text-align: center;
+  padding: 6rem 2rem;
+  background-color: #000;
+  color: var(--color-accent);
+}
+
+.hero.splash h1 {
+  font-size: var(--font-size-xxl);
+  margin-bottom: 1rem;
+  color: var(--color-accent);
+}
+
+.hero.splash p.tagline {
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
 }
 
 .module-fluid {
