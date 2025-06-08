@@ -96,8 +96,8 @@ em {
 }
 
 /* links */
-
 a {
+  position: relative;
   color: var(--color-accent);
   text-decoration: none;
   transition: color 0.3s ease, text-decoration 0.3s ease;
@@ -107,6 +107,24 @@ a:hover,
 a:focus {
   color: var(--color-accent-hover);
   text-decoration: underline;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: -2px;
+  background-color: var(--accent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 /* filters */
