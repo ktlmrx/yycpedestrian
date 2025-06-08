@@ -81,3 +81,21 @@ section.visible {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* flowing sections */
+section {
+  padding: 4rem 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0), var(--background));
+  z-index: -1;
+}
