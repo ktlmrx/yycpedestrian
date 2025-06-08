@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- BASE HEAD -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>local news | yycpedestrian</title>
-  <meta name="description" content="Plan your stay, avoid the crosswalks, and discover Calgary from a safe distance. A satirical guide to pedestrian collisions in YYC." />
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+  <link rel="icon" href="favicon.ico" />
   <link rel="modulepreload" href="components/header.js" />
   <link rel="modulepreload" href="components/footer.js" />
 
+  <!-- PAGE META -->
+  <title>local news | yycpedestrian</title>
+  <meta name="description" content="stay up to date with recent pedestrian collisions in Calgary, compiled from local news reports." />
+  <meta property="og:title" content="local news | yycpedestrian" />
+  <meta property="og:description" content="recent news about pedestrian safety and collisions in Calgary." />
+  <meta property="og:image" content="assets/news-preview.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yycpedestrian.ca/news.html" />
 </head>
+
 <body>
  <script type="module" src="components/header.js"></script>
 
