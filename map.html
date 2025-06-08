@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-sA+e2qlMC6zCy4jM2Eme0FQZ94PQFy+tb3PZg9bMMro="
+    crossorigin=""
+  />
+
+  <!-- Leaflet JS -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-o9N1jfzJH8G+PYBxl9E9CnIrwAqGL+qV2lMXTYPf3p0="
+    crossorigin=""
+    defer
+  ></script>
+
   <!-- BASE HEAD -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,7 +35,15 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://yycpedestrian.ca/map.html" />
 </head>
-
+<style>
+  #map {
+  height: 400px;
+  width: 100%;
+  margin: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+</style>
   <body>
    <script type="module" src="components/header.js"></script>
   
