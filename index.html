@@ -12,7 +12,7 @@
 
   <!-- PAGE META -->
   <title>yycpedestrian: your unofficial survival guide to Calgary</title>
-  <meta name="description" content="Plan your stay, avoid the crosswalks, and discover Calgary from a safe distance. A satirical guide to pedestrian collisions in YYC." />
+  <meta name="description" content="plan your stay, avoid the crosswalks, and discover Calgary from a safe distance. a satirical guide to pedestrian collisions in YYC" />
   <meta property="og:title" content="yycpedestrian" />
   <meta property="og:description" content="pedestrian collisions in Calgary" />
   <meta property="og:image" content="assets/social-preview.jpg" />
@@ -21,45 +21,49 @@
 </head>
   
 <body>
-<script type="module" src="components/header.js"></script>
-<script>
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
-
-  document.querySelectorAll("section").forEach(section => {
-    observer.observe(section);
-  });
-</script>
+  <a href="#main-content" class="sr-only sr-only-focusable">skip to main</a>
+  <script type="module" src="components/header.js"></script>
 
   <main id="main-content">
     <section>
-  <h2>welcome to calgary</h2>
-  <p>proud home of sprawling suburbs, questionable urban planning, and a world-class collection of unprotected crosswalks.</p>
-  <p>whether you're a local pedestrian or a visitor just passing through—keep your eyes open, your shoes tied, and your will updated.</p>
-</section>
+      <h2>welcome to calgary</h2>
+      <p>proud home of sprawling suburbs, questionable urban planning, and a world-class collection of unprotected crosswalks.</p>
+      <p>whether you're a local pedestrian or a visitor just passing through—keep your eyes open, your shoes tied, and your will updated.</p>
+    </section>
 
-<section>
-  <h2 id="days-since">🚧 loading safety stats...</h2>
-</section>
+    <section>
+      <h2 id="days-since">🚧 loading safety stats...</h2>
+    </section>
 
-<section>
-  <h3>featured collisions</h3>
-  <ul id="incident-feed"></ul>
-  <p><em>don't worry. it only happens every few days.</em></p>
-</section>
+    <section>
+      <h3>featured collisions</h3>
+      <ul id="incident-feed"></ul>
+      <p><em>don't worry. it only happens every few days.</em></p>
+    </section>
   </main>
-<script type="module" src="components/footer.js"></script>
 
-<script src="js/incidents.js" defer></script>
+  <script type="module" src="components/footer.js"></script>
+  <script src="js/incidents.js" defer></script>
 
+  <!-- Smooth section fade-in on scroll -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      document.querySelectorAll("section").forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
 </body>
 </html>
