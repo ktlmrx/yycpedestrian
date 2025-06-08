@@ -1,153 +1,96 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-/* root variables */
+
+/* https://hazelmay.co.uk/ inspired */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600&display=swap');
+
 :root {
+  --primary-bg: #1c1c1c;
+  --accent: #ff4e2f;
+  --text-light: #f9f4e2;
+  --text-muted: #aaa;
+  --font-display: 'Anton', sans-serif;
   --font-body: 'Inter', sans-serif;
-  --font-heading: 'Space Grotesk', sans-serif;
-
-  --font-size-base: 1rem;
-  --font-size-lg: 1.25rem;
-  --font-size-xl: 2.5rem;
-
-  --color-bg-1: #ffffff;
-  --color-bg-2: #f7f7f7;
-  --color-text: #1c1c1c;
-  --color-muted: #666666;
-  --color-accent: #faaf19;
-  --color-accent-alt: #d2001c;
-
-  --radius: 4px;
-  --transition: 0.3s ease;
-  --shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* base reset */
-*,
-*::before,
-*::after {
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  margin: 0;
+  background: var(--primary-bg);
+  color: var(--text-light);
   font-family: var(--font-body);
-  font-size: var(--font-size-base);
-  color: var(--color-text);
-  background: var(--color-bg-1);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* main layout */
-main {
-  max-width: 900px;
+header {
+  padding: 3rem 1.5rem;
+  text-align: left;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 2rem 1rem;
 }
 
-section {
-  padding: 6rem 1rem;
+.hero-heading {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  line-height: 1.1;
+  color: var(--text-light);
+  transform: rotate(-2deg);
+  background: var(--accent);
+  display: inline-block;
+  padding: 0.2em 0.4em;
+  margin-bottom: 1rem;
 }
 
-section:nth-child(odd) {
-  background: var(--color-bg-1);
+.section {
+  padding: 5rem 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-section:nth-child(even) {
-  background: var(--color-bg-2);
+.section:nth-child(even) {
+  background: #2a2a2a;
 }
-
-/* headings & typography */
-h1, h2, h3 {
-  font-family: var(--font-heading);
-  margin: 0 0 1rem;
-  color: var(--color-text);
-  line-height: 1.2;
-}
-
-h1 { font-size: 3.5rem; }
 
 h2 {
-  font-size: var(--font-size-xl);
-  color: var(--color-accent);
+  font-family: var(--font-display);
+  color: var(--text-light);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
-h3 {
-  font-size: var(--font-size-lg);
-  color: var(--color-accent-alt);
+p {
+  color: var(--text-muted);
+  font-size: 1.125rem;
 }
 
-p, li {
-  margin-bottom: 1.5rem;
-  color: var(--color-text);
+.cta {
+  text-align: center;
+  background: var(--accent);
+  color: var(--primary-bg);
+  padding: 3rem 1.5rem;
+  font-size: 2rem;
+  font-family: var(--font-display);
 }
 
-a {
-  color: var(--color-accent);
-  text-decoration: none;
-  position: relative;
-  font-weight: 500;
-  transition: color var(--transition);
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 100%;
-  height: 2px;
-  background: var(--color-accent);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform var(--transition);
+.work-item {
+  background: #111;
+  border: 1px solid #333;
+  padding: 1rem;
 }
 
-a:hover {
-  color: var(--color-accent-alt);
-}
-
-a:hover::after {
-  transform: scaleX(1);
-}
-
-/* buttons */
-.button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: var(--color-accent);
-  color: #fff;
-  border-radius: var(--radius);
-  font-weight: 600;
-  transition: background var(--transition), transform var(--transition);
-}
-
-.button:hover {
-  background: var(--color-accent-alt);
-  transform: translateY(-2px);
-}
-
-/* images */
-img {
-  width: 100%;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  margin-top: 1.5rem;
-}
-
-/* accessibility */
-.sr-only {
-  position: absolute;
-  left: -9999px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-.sr-only-focusable:focus {
-  position: static;
-  width: auto;
-  height: auto;
-  overflow: visible;
+footer {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: var(--text-muted);
+  background: #111;
 }
