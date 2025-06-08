@@ -19,26 +19,51 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://yycpedestrian.ca/" />
 </head>
-  
+
 <body>
-  <a href="#main-content" class="sr-only sr-only-focusable">skip to main</a>
+  <a href="#main-content" class="sr-only sr-only-focusable">skip to main content</a>
   <script type="module" src="components/header.js"></script>
 
   <main id="main-content">
-    <section>
-      <h2>welcome to calgary</h2>
-      <p>proud home of sprawling suburbs, questionable urban planning, and a world-class collection of unprotected crosswalks.</p>
-      <p>whether you're a local pedestrian or a visitor just passing through—keep your eyes open, your shoes tied, and your will updated.</p>
+    <section class="hero">
+      <h1>welcome to calgary</h1>
+      <p class="tagline">sprawling suburbs. questionable planning. and more near-death crosswalk experiences than you'd expect.</p>
     </section>
 
-    <section>
-      <h2 id="days-since">🚧 loading safety stats...</h2>
+    <section class="intro-feature grid">
+      <div class="text-block">
+        <h2>🚧 recent incidents</h2>
+        <p>it happens every few days. want proof?</p>
+        <a href="stats.html" class="cta-link">view the stats</a>
+      </div>
+      <div class="snippet-block">
+        <ul id="incident-feed">
+          <!-- populated by incidents.js -->
+        </ul>
+      </div>
     </section>
 
-    <section>
-      <h3>featured collisions</h3>
-      <ul id="incident-feed"></ul>
-      <p><em>don't worry. it only happens every few days.</em></p>
+    <section class="highlighted grid reverse">
+      <div class="text-block">
+        <h2>📍hotspots</h2>
+        <p>where the collisions keep colliding. map your odds and walk the line.</p>
+        <a href="map.html" class="cta-link">see the map</a>
+      </div>
+      <div class="snippet-block">
+        <div class="mini-map-placeholder">map preview coming soon</div>
+      </div>
+    </section>
+
+    <section class="resource-teaser">
+      <h2>🧰 resources for walkers (and survivors)</h2>
+      <p>know your rights, recognize red flags, and learn how to file a complaint that will absolutely be ignored.</p>
+      <a href="resources.html" class="cta-link">browse resources</a>
+    </section>
+
+    <section class="footer-pitch">
+      <h2>🌇 yyc pedestrian is part satire, part public service</h2>
+      <p>made by a calgarian who walks here anyway. want to contribute? spotted something missing? hit us up.</p>
+      <a href="mailto:hello@yycpedestrian.ca" class="cta-link">contact us</a>
     </section>
   </main>
 
