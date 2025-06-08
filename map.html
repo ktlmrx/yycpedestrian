@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- BASE HEAD -->
   <meta charset="UTF-8" />
-  <title>hotspots | yycpedestrian</title>
-  <meta name="description" content="Plan your stay, avoid the crosswalks, and discover Calgary from a safe distance. A satirical guide to pedestrian collisions in YYC." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+  <link rel="icon" href="favicon.ico" />
   <link rel="modulepreload" href="components/header.js" />
   <link rel="modulepreload" href="components/footer.js" />
-  <style> 
-    #map {
-      height: 600px;
-      width: 100%;
-      margin-top: 1em;
-    }
-  </style>
+
+  <!-- PAGE META -->
+  <title>hot spots | yycpedestrian</title>
+  <meta name="description" content="crash map: Calgary’s hotspots" />
+  <meta property="og:title" content="interactive map | yycpedestrian" />
+  <meta property="og:description" content="real-time map of pedestrian collisions in Calgary." />
+  <meta property="og:image" content="assets/map-preview.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yycpedestrian.ca/map.html" />
 </head>
 
   <body>
