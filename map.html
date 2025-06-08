@@ -1,22 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Leaflet CSS -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
-    integrity="sha256-sA+e2qlMC6zCy4jM2Eme0FQZ94PQFy+tb3PZg9bMMro="
-    crossorigin=""
-  />
-
-  <!-- Leaflet JS -->
-  <script
-    src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-    integrity="sha256-o9N1jfzJH8G+PYBxl9E9CnIrwAqGL+qV2lMXTYPf3p0="
-    crossorigin=""
-    defer
-  ></script>
-
   <!-- BASE HEAD -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,51 +10,66 @@
   <link rel="modulepreload" href="components/header.js" />
   <link rel="modulepreload" href="components/footer.js" />
 
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+  />
+
   <!-- PAGE META -->
   <title>hot spots | yycpedestrian</title>
   <meta name="description" content="crash map: Calgary’s hotspots" />
   <meta property="og:title" content="interactive map | yycpedestrian" />
-  <meta property="og:description" content="real-time map of pedestrian collisions in Calgary." />
+  <meta property="og:description" content="real-time map of pedestrian collisions in Calgary" />
   <meta property="og:image" content="assets/map-preview.jpg" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://yycpedestrian.ca/map.html" />
+
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+      margin: 1rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+  </style>
 </head>
-<style>
-  #map {
-  height: 400px;
-  width: 100%;
-  margin: 1rem 0;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-}
-</style>
-  <body>
-   <script type="module" src="components/header.js"></script>
+
+<body>
+  <script type="module" src="components/header.js"></script>
   
-    <main id="main-content">
+  <main id="main-content">
     <h2>calgary pedestrian incidents map</h2>
     <p>locations shown are approximate, based on available reporting.</p>
     <section>
-    <label for="filter-fatal">Show only fatal incidents</label>
-    <input type="checkbox" id="filter-fatal" />
+      <label for="filter-fatal">Show only fatal incidents</label>
+      <input type="checkbox" id="filter-fatal" />
     </section>
 
     <section>
-    <label for="filter-tag">Filter by tag:</label>
-    <select id="filter-tag">
-    <option value="">all</option>
-    <option value="hit-and-run">hit and run</option>
-    <option value="skateboard">skateboard</option>
-    <!-- add other tags -->
-    </select>
+      <label for="filter-tag">Filter by tag:</label>
+      <select id="filter-tag">
+        <option value="">all</option>
+        <option value="hit-and-run">hit and run</option>
+        <option value="skateboard">skateboard</option>
+        <!-- add other tags -->
+      </select>
     </section>
+
     <div id="map" role="application" aria-label="Map showing approximate locations of pedestrian incidents in Calgary"></div>
+
     <h2>incident feed</h2>
     <ul id="incident-feed"></ul>
-    </main>
+  </main>
 
-    <script type="module" src="components/footer.js"></script>
+  <!-- Leaflet JS -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    defer
+  ></script>
 
+  <script type="module" src="components/footer.js"></script>
   <script src="js/map.js" defer></script>
 </body>
 </html>
