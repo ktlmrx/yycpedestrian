@@ -7,9 +7,12 @@
   <meta name="description" content="Plan your stay, avoid the crosswalks, and discover Calgary from a safe distance. A satirical guide to pedestrian collisions in YYC." />
   <link rel="stylesheet" href="css/style.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="modulepreload" href="components/header.js" />
+  <link rel="modulepreload" href="components/footer.js" />
+
 </head>
 <body>
-  <link rel="modulepreload" href="components/header.js" />
+  <script type="module" src="components/header.js"></script>
   <main id="main-content">
   <h2>calgary pedestrian incident statistics</h2>
 
@@ -34,8 +37,7 @@
 
   </main>
   
-<link rel="modulepreload" href="components/footer.js" />
-
+<script type="module" src="components/footer.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="js/stats.js"></script>
 
