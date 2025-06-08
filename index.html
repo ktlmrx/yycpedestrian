@@ -12,9 +12,11 @@
   <meta property="og:description" content="a satirical guide to pedestrian collisions in Calgary." />
   <meta property="og:image" content="path/to/social-preview.jpg" />
   <meta property="og:type" content="website" />
+  <link rel="modulepreload" href="components/header.js" />
+<link rel="modulepreload" href="components/footer.js" />
 </head>
 <body>
-<link rel="modulepreload" href="components/header.js" />
+<script type="module" src="components/header.js"></script>
   <main id="main-content">
     <section>
   <h2>welcome to calgary</h2>
@@ -32,7 +34,7 @@
   <p><em>don't worry. it only happens every few days.</em></p>
 </section>
   </main>
-<link rel="modulepreload" href="components/footer.js" />
+<script type="module" src="components/footer.js"></script>
 
 <script src="js/incidents.js" defer></script>
 
