@@ -10,11 +10,13 @@
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://your-site-url/incident.html">
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="modulepreload" href="components/header.js" />
+  <link rel="modulepreload" href="components/footer.js" />
 </head>
 
 <body>
-  <link rel="modulepreload" href="components/header.js" />
-
+  <script type="module" src="components/header.js"></script>
+  
 <main id="main-content">
     <article id="incident-details" aria-live="polite">
       <h1 class="sr-only">Calgary Pedestrian Incident Detail</h1>
@@ -22,8 +24,7 @@
     </article>
   </main>
 
-  <link rel="modulepreload" href="components/footer.js" />
-
+  <script type="module" src="components/footer.js"></script>
   <script src="js/incident.js" defer></script>
 </body>
 </html>
