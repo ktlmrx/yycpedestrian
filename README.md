@@ -1,2 +1,2 @@
 # yycpedestrian
-tracking pedestrian incidents in Calgar
+tracking pedestrian incidents in Calgary
