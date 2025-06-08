@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-
+  <link rel="modulepreload" href="components/header.js" />
+  <link rel="modulepreload" href="components/footer.js" />
   <style> 
     #map {
       height: 600px;
@@ -19,7 +20,8 @@
 </head>
 
   <body>
-  <link rel="modulepreload" href="components/header.js" />
+   <script type="module" src="components/header.js"></script>
+  
     <main id="main-content">
     <h2>calgary pedestrian incidents map</h2>
     <p>locations shown are approximate, based on available reporting.</p>
@@ -34,7 +36,7 @@
     <option value="">all</option>
     <option value="hit-and-run">hit and run</option>
     <option value="skateboard">skateboard</option>
-    <!-- add other tags you use -->
+    <!-- add other tags -->
     </select>
     </section>
     <div id="map" role="application" aria-label="Map showing approximate locations of pedestrian incidents in Calgary"></div>
@@ -42,7 +44,7 @@
     <ul id="incident-feed"></ul>
     </main>
 
-    <link rel="modulepreload" href="components/footer.js" />
+    <script type="module" src="components/footer.js"></script>
 
   <script src="js/map.js" defer></script>
 </body>
