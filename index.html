@@ -9,7 +9,9 @@
   <link rel="icon" href="favicon.ico" />
   <link rel="modulepreload" href="components/header.js" />
   <link rel="modulepreload" href="components/footer.js" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
   <!-- PAGE META -->
   <title>yycpedestrian: your unofficial survival guide to Calgary</title>
   <meta name="description" content="plan your stay, avoid the crosswalks, and discover Calgary from a safe distance. a satirical guide to pedestrian collisions in YYC" />
@@ -19,57 +21,75 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://yycpedestrian.ca/" />
 </head>
-//
-
+  
 <body>
 
-  <a href="#main" class="sr-only sr-only-focusable">skip to content</a>
-
   <header class="hero splash">
-    <h1>yyc pedestrian</h1>
-    <p class="tagline">an unofficial guide to crossing safely in Calgary.</p>
+    <div class="hero-intro">
+      <h1 class="tag">HELLO</h1>
+      <h1 class="tag primary">WE ARE WALK SAFE YYC</h1>
+    </div>
+    <p class="tagline">Designing for safer, more walkable cities through advocacy, action, and creative tech.</p>
   </header>
 
-  <main id="main">
-    <section class="module">
-      <div class="unit">
-        <h2>interactive map</h2>
-        <p>Explore where pedestrian collisions are happening — and why. Our custom map highlights key areas in Calgary where extra caution is needed.</p>
-        <a href="map.html" class="button">Explore map</a>
+  <main>
+
+    <section class="statement split-section">
+      <div class="left">
+        <h2>an idea is just that,</h2>
+        <h2 class="highlight">until someone brings it to life</h2>
+      </div>
+      <div class="right">
+        <p>We're here to challenge the status quo of car-centric design. Our mission? Build safer streets, tell powerful stories, and inspire everyday Calgarians to reimagine what’s possible on foot.</p>
       </div>
     </section>
 
-    <section class="module">
-      <div class="unit">
-        <h2>latest incidents</h2>
-        <p>Stay informed. We track recent pedestrian-involved incidents in Calgary to help you identify risky intersections and patterns.</p>
-        <a href="news.html" class="button">View incidents</a>
+    <section class="services dark-section">
+      <h2>What We Do</h2>
+      <div class="service-grid">
+        <div class="card">
+          <h3>Urban Safety Advocacy</h3>
+          <p>We push for policy and design that centres pedestrians — not cars — in public space planning.</p>
+        </div>
+        <div class="card">
+          <h3>Research & Storytelling</h3>
+          <p>We combine data with personal narratives to create persuasive campaigns that inspire change.</p>
+        </div>
+        <div class="card">
+          <h3>Web Design & Tools</h3>
+          <p>From interactive maps to civic guides, we design tools that inform, empower, and mobilize.</p>
+        </div>
       </div>
     </section>
 
-    <section class="module">
-      <div class="unit">
-        <h2>resources</h2>
-        <p>Get equipped with tips, toolkits, and local contacts for pedestrian safety. Whether you're a commuter, parent, or advocate — there’s something here for you.</p>
-        <a href="resources.html" class="button">View resources</a>
+    <section class="portfolio light-section">
+      <h2>Stuff We've Done</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="images/crosswalk-campaign.jpg" alt="Crosswalk campaign image"/>
+          <p>📍 Mid-block crosswalk audit toolkit (2024)</p>
+        </div>
+        <div class="project-card">
+          <img src="images/streetvision.jpg" alt="Street Vision 2040"/>
+          <p>🔮 Street Vision 2040: Interactive prototype</p>
+        </div>
+      </div>
+      <div class="text-center">
+        <a href="#contact" class="button">See More Work</a>
       </div>
     </section>
 
-    <section class="module">
-      <div class="unit">
-        <h2>stats that matter</h2>
-        <p>We’ve compiled the most important facts and figures about pedestrian safety in Calgary — from city data to community reports.</p>
-        <a href="stats.html" class="button">View stats</a>
-      </div>
+    <section class="contact callout-section" id="contact">
+      <h2>Let’s Make Streets Safer</h2>
+      <p>Whether you’re a city builder, community group, or curious resident — we want to hear from you.</p>
+      <a href="mailto:hello@walksafeyyc.ca" class="button">Get in Touch</a>
     </section>
 
-    <section class="module">
-      <div class="unit">
-        <h2>get in touch</h2>
-        <p>Want to collaborate, ask questions, or hire me for a project? I'd love to hear from you.</p>
-        <a href="mailto:hello@example.com" class="button">Email me</a>
-      </div>
-    </section>
   </main>
+
+  <footer class="footer dark-section">
+    <p>&copy; 2025 Walk Safe YYC. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
