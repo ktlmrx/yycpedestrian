@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- BASE HEAD -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>404 not found | yycpedestrian</title>
-  <meta name="description" content="this page doesn’t exist" />
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+  <link rel="icon" href="favicon.ico" />
   <link rel="modulepreload" href="components/header.js" />
   <link rel="modulepreload" href="components/footer.js" />
+
+  <!-- PAGE META -->
+  <title>not found | yycpedestrian</title>
+  <meta name="description" content="you seem lost" />
+  <meta property="og:title" content="not found | yycpedestrian" />
+  <meta property="og:description" content="this page doesn’t exist" />
+  <meta property="og:image" content="assets/404-preview.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yycpedestrian.ca/404.html" />
 </head>
+
 
 <body>
   <script type="module" src="components/header.js"></script>
