@@ -54,3 +54,20 @@ document.querySelectorAll('a, button').forEach(el => {
     cursor.style.borderColor = 'rgba(0,0,0,0.5)';
   });
 });
+
+// section transition
+const sections = document.querySelectorAll('.section');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+sections.forEach(section => {
+  observer.observe(section);
+});
