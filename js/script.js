@@ -71,3 +71,19 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach(section => {
   observer.observe(section);
 });
+
+const revealElements = document.querySelectorAll('.reveal');
+
+const staggerObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry, index) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.classList.add('visible');
+      }, index * 100); // adjust the stagger speed
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+revealElements.forEach(el => staggerObserver.observe(el));
