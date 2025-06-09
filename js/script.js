@@ -22,6 +22,18 @@ window.addEventListener('scroll', () => {
 
   lastScroll = currentScroll;
 });
+//
+const stickyNav = document.getElementById('stickyNav');
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.scrollY;
+
+  if (currentScroll > 100) {
+    document.body.classList.add('scrolled');
+  } else {
+    document.body.classList.remove('scrolled');
+  }
+});
 
 // cursor
 const cursor = document.querySelector('.custom-cursor');
