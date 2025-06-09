@@ -1,96 +1,217 @@
-
-/* https://hazelmay.co.uk/ inspired */
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600&display=swap');
-
-:root {
-  --primary-bg: #1c1c1c;
-  --accent: #ff4e2f;
-  --text-light: #f9f4e2;
-  --text-muted: #aaa;
-  --font-display: 'Anton', sans-serif;
-  --font-body: 'Inter', sans-serif;
-}
-
+/* --------------------------
+  BASIC RESET & TYPOGRAPHY
+---------------------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: none;
 }
 
 body {
-  background: var(--primary-bg);
-  color: var(--text-light);
-  font-family: var(--font-body);
-  line-height: 1.6;
+  font-family: 'Helvetica Neue', sans-serif;
+  background: #f4f4f4;
+  color: #111;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-header {
-  padding: 3rem 1.5rem;
-  text-align: left;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.hero-heading {
-  font-family: var(--font-display);
-  font-size: 4rem;
-  line-height: 1.1;
-  color: var(--text-light);
-  transform: rotate(-2deg);
-  background: var(--accent);
-  display: inline-block;
-  padding: 0.2em 0.4em;
-  margin-bottom: 1rem;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .section {
-  padding: 5rem 1.5rem;
-  max-width: 1000px;
-  margin: 0 auto;
+  height: 100vh;
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: background-color 1s ease, color 1s ease;
 }
 
-.section:nth-child(even) {
-  background: #2a2a2a;
+.alt-bg {
+  background: #111;
+  color: #f4f4f4;
 }
 
-h2 {
-  font-family: var(--font-display);
-  color: var(--text-light);
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-p {
-  color: var(--text-muted);
-  font-size: 1.125rem;
-}
-
-.cta {
+/* --------------------------
+  HEADER + LANDING
+---------------------------- */
+#landing {
+  position: relative;
+  background: #f4f4f4;
   text-align: center;
-  background: var(--accent);
-  color: var(--primary-bg);
-  padding: 3rem 1.5rem;
+  padding-top: 4rem;
+}
+
+.logo-container {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1000;
+}
+
+.logo {
+  width: 120px;
+  transition: transform 0.3s ease;
+}
+
+.hamburger {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 30px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger span {
+  height: 4px;
+  background: #111;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger menu open state (optional JS class) */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(10px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-10px);
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transition: right 0.4s ease;
+}
+
+nav.active {
+  right: 0;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+nav li {
+  margin: 1.5rem 0;
   font-size: 2rem;
-  font-family: var(--font-display);
+  font-weight: bold;
 }
 
-.work-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+/* --------------------------
+  ON SCROLL NAV BAR
+---------------------------- */
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.sticky-nav.hidden {
+  transform: translateY(-100%);
+}
+
+/* --------------------------
+  CURSOR
+---------------------------- */
+.custom-cursor {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(0,0,0,0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease-out, border-color 0.2s ease;
+  z-index: 9999;
+}
+
+a:hover ~ .custom-cursor,
+button:hover ~ .custom-cursor {
+  border-color: #ff5533;
+  transform: scale(1.5) translate(-50%, -50%);
+}
+
+/* --------------------------
+  FOOTER
+---------------------------- */
+footer.footer {
+  background: #222;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* --------------------------
+  MISC
+---------------------------- */
+.language-switch {
+  position: absolute;
+  top: 1rem;
+  right: 5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.tagline {
+  font-size: 1.8rem;
+  margin-top: 8rem;
+}
+
+.scroll-cta {
   margin-top: 2rem;
+  font-size: 1.2rem;
+  opacity: 0.7;
+  animation: bounce 2s infinite;
 }
 
-.work-item {
-  background: #111;
-  border: 1px solid #333;
+@keyframes bounce {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(5px); }
+}
+
+.cookie-popup {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: #fff;
   padding: 1rem;
-}
-
-footer {
-  padding: 2rem 1.5rem;
-  text-align: center;
-  color: var(--text-muted);
-  background: #111;
+  font-size: 0.85rem;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
 }
