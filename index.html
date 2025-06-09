@@ -21,75 +21,64 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://yycpedestrian.ca/" />
 </head>
-  
+
 <body>
 
-  <header class="hero splash">
-    <div class="hero-intro">
-      <h1 class="tag">HELLO</h1>
-      <h1 class="tag primary">WE ARE WALK SAFE YYC</h1>
+  <!-- Custom Cursor -->
+  <div class="custom-cursor"></div>
+
+  <!-- Header -->
+  <header id="landing">
+    <div class="logo-container">
+      <a href="#landing"><img src="images/logo.svg" alt="yyc pedestrian logo" class="logo"></a>
     </div>
-    <p class="tagline">Designing for safer, more walkable cities through advocacy, action, and creative tech.</p>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <nav id="nav" class="hidden">
+      <ul>
+        <li><a href="#map">map</a></li>
+        <li><a href="#news">news</a></li>
+        <li><a href="#resources">resources</a></li>
+        <li><a href="#stats">stats</a></li>
+      </ul>
+    </nav>
+    <div class="language-switch">EN | FR</div>
+    <div class="tagline">safer streets</div>
+    <div class="scroll-cta"><a href="#about">scroll ↓</a></div>
   </header>
 
-  <main>
+  <!-- Sections -->
+  <section id="about" class="section">
+    <h2>about</h2>
+    <p>we fight for pedestrian-friendly infrastructure</p>
+  </section>
 
-    <section class="statement split-section">
-      <div class="left">
-        <h2>an idea is just that,</h2>
-        <h2 class="highlight">until someone brings it to life</h2>
-      </div>
-      <div class="right">
-        <p>We're here to challenge the status quo of car-centric design. Our mission? Build safer streets, tell powerful stories, and inspire everyday Calgarians to reimagine what’s possible on foot.</p>
-      </div>
-    </section>
+  <section id="work" class="section alt-bg">
+    <h2>map</h2>
+    <p>map</p>
+  </section>
 
-    <section class="services dark-section">
-      <h2>What We Do</h2>
-      <div class="service-grid">
-        <div class="card">
-          <h3>Urban Safety Advocacy</h3>
-          <p>We push for policy and design that centres pedestrians — not cars — in public space planning.</p>
-        </div>
-        <div class="card">
-          <h3>Research & Storytelling</h3>
-          <p>We combine data with personal narratives to create persuasive campaigns that inspire change.</p>
-        </div>
-        <div class="card">
-          <h3>Web Design & Tools</h3>
-          <p>From interactive maps to civic guides, we design tools that inform, empower, and mobilize.</p>
-        </div>
-      </div>
-    </section>
+  <section id="contact" class="section">
+    <h2>news</h2>
+    <p>news</p>
+  </section>
 
-    <section class="portfolio light-section">
-      <h2>Stuff We've Done</h2>
-      <div class="project-grid">
-        <div class="project-card">
-          <img src="images/crosswalk-campaign.jpg" alt="Crosswalk campaign image"/>
-          <p>📍 Mid-block crosswalk audit toolkit (2024)</p>
-        </div>
-        <div class="project-card">
-          <img src="images/streetvision.jpg" alt="Street Vision 2040"/>
-          <p>🔮 Street Vision 2040: Interactive prototype</p>
-        </div>
-      </div>
-      <div class="text-center">
-        <a href="#contact" class="button">See More Work</a>
-      </div>
-    </section>
-
-    <section class="contact callout-section" id="contact">
-      <h2>Let’s Make Streets Safer</h2>
-      <p>Whether you’re a city builder, community group, or curious resident — we want to hear from you.</p>
-      <a href="mailto:hello@walksafeyyc.ca" class="button">Get in Touch</a>
-    </section>
-
-  </main>
-
-  <footer class="footer dark-section">
-    <p>&copy; 2025 Walk Safe YYC. All rights reserved.</p>
+  <!-- Fullscreen Footer -->
+  <footer id="footer" class="section footer">
+    <h2>contact</h2>
+    <ul>
+      <li>email</li>
+      <li>social media</li>
+    </ul>
   </footer>
 
+  <!-- Cookies Notice -->
+  <div class="cookie-popup">
+    <p>we use cookies to improve your experience</p>
+    <button>okay</button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
